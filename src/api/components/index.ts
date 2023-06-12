@@ -1,7 +1,9 @@
 import { Router } from 'express';
-import { UserRoutes } from './user/user.routes';
+import { AgendaRoutes } from './agenda/agenda.routes';
 import { BaseRoutes } from './base/base.routes';
-import { DespesaRoutes } from './despesa/despesa.routes';
+import { DentistaRoutes } from './dentista/dentista.routes';
+import { ProcedimentoRoutes } from './procedimento/procedimento.routes';
+import { ConsultaProcedimentoRoutes } from './consulta_procedimento/consulta_procedimento.routes';
 
 /**
  * Init component routes
@@ -12,6 +14,8 @@ import { DespesaRoutes } from './despesa/despesa.routes';
  */
 export function registerRoutes(router: Router, prefix: string = ''): void {
   router.use(`${prefix}`, new BaseRoutes().routes());
-  // router.use(`${prefix}/users`, new UserRoutes().routes());
-  router.use(`${prefix}/despesas`, new DespesaRoutes().routes());
+  router.use(`${prefix}/agenda`, new AgendaRoutes().routes());
+  router.use(`${prefix}/dentista`, new DentistaRoutes().routes());
+  router.use(`${prefix}/procedimento`, new ProcedimentoRoutes().routes());
+  router.use(`${prefix}/consultaProcedimento`, new ConsultaProcedimentoRoutes().routes());
 }
