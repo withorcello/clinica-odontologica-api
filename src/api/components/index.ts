@@ -12,7 +12,7 @@ import { ConsultaProcedimentoRoutes } from './consulta_procedimento/consulta_pro
  * @param {string} prefix
  * @returns {void}
  */
-export function registerRoutes(router: Router, prefix: string = ''): void {
+export function registerRoutes(router: Router, prefix: string = ""): void {
   router.use(`${prefix}`, new BaseRoutes().routes());
   router.use(`${prefix}/agenda`, new AgendaRoutes().routes());
   router.use(`${prefix}/dentista`, new DentistaRoutes().routes());
