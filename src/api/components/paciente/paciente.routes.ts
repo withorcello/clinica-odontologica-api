@@ -12,11 +12,11 @@ export class PacienteRoutes {
   }
 
   private init(): void {
-    this.router.get("/", this.controller.findAll.bind(this.controller));
-    this.router.get("/:id", this.controller.findOne.bind(this.controller));
-    this.router.post("/", this.controller.create.bind(this.controller));
-    this.router.patch("/:id", this.controller.update.bind(this.controller));
-    this.router.delete("/:id", this.controller.delete.bind(this.controller));
+    this.router.get("/", this.controller.findAll);
+    this.router.get("/:id", this.controller.findOne);
+    this.router.post("/", this.controller.create);
+    this.router.patch("/:id", this.controller.update);
+    this.router.delete("/:id", this.controller.delete);
   }
 
   public routes(): Router {
