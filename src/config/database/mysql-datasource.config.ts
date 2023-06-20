@@ -4,9 +4,9 @@ import { DataSource } from "typeorm";
 export const AppDataSource = new DataSource({
   type: "mysql",
   host: "localhost",
-  port: 3360,
-  username: "root",
-  password: "root",
+  port: 3306,
+  username: "root2",
+  password: "root2",
   database: "dentista_db",
   synchronize: false,
   logging: false,
